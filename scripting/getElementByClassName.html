@@ -1,0 +1,31 @@
+<html>
+    <head> Working With getElementByClassName
+        <title>getElementByClassName</title>
+     <script>
+
+         function clk()
+        { 
+            let C1 = document.getElementsByClassName("C1");
+            let C2 = document.getElementsByClassName("C2");
+            for(let i=0;i<C1.length;i++)
+            {
+                C1[i].style.fontSize = 30;
+            }
+            for(let j=0;j<C2.length;j++){
+                C2[j].style.color = 'blue';
+            }
+         }
+     
+     </script>
+    
+    </head>
+    <body>
+        <p id="p1" class="C1" > This is paragraph 1</p>
+        <p id="p2"  class="C2"> This is paragraph 2</p>
+        <p id="p3" class="C1"> This is paragraph 3</p>
+        <p id="p4" class="C2"> This is paragraph 4</p>
+        <a href="https://towardsdatascience.com/" class="C1">Anchor Tag </a>
+        <br><br>
+        <button id="btn" onclick="clk()">Click here</button>
+    </body>
+</html>

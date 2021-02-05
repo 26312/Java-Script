@@ -1,0 +1,18 @@
+.firstdiv{
+    color: orangered;
+    border: 2px solid rebeccapurple;
+    margin: 5px;
+    padding: 3px;
+}
+.seconddiv{
+    color: saddlebrown;
+    border: 3px solid blue ;
+    margin: 3px;
+    padding: 5px;
+}
+.thirddiv{
+    color: teal;
+    margin: 5px;
+    border: 2px solid red;
+    margin: 9px;
+}

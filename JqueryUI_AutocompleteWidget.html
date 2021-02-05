@@ -1,0 +1,34 @@
+<html>
+    <head><h3><b><i>Autocomplete Widget in JQuery UI</i></b></h3>
+        <title>Autocomplete Widget</title>
+        <link rel="stylesheet" href="CSS/effects.css">
+        <link rel="stylesheet" href="jquery-ui/jquery-ui.css">
+        <link rel="stylesheet" href="jquery-ui/jquery-ui.structure.css">
+        <link rel="stylesheet" href="jquery-ui/jquery-ui.theme.css">
+    </head>
+    <body>
+            <div id="div1">
+                <label><b>Enter you favourite city</b></label>
+                <input id="t1" type="text" placeholder="City" name="">
+            </div>
+    </body>
+    <script type="text/javascript" src="JS/jquery.js"></script>
+    <script type="text/javascript" src="jquery-ui/jquery-ui.js"></script>
+    <script>
+        
+        var city = ["New-Delhi","New-York","New-Jersey","Mumbai","Banglore","Chennai","Kolkata","Hamburg","Munich","Hannover",
+                    "Dusseldorf","Duisburg","Berlin","Colonge","Bonn"];
+
+        $("#t1").autocomplete(
+            {
+                source: city
+            },
+            {
+                autoFocus:true,
+                minLength:1,
+                delay:0
+            }
+            );
+    
+    </script>
+</html>

@@ -1,0 +1,53 @@
+<html>
+    <head> JQuery DOM Manipultation - 4
+        <title>DOM Manipulation-4</title>
+        <link rel="stylesheet" href="CSS/JqueryDOMManipulation_3.css">
+    </head>
+    <body>
+        <br><br>
+        <button id="btn1">Add Class</button>
+        <button id="btn2">Remove Class</button>
+        <button id="btn3">Toggel Class</button>
+        <button id="btn4">CSS</button>
+        <br>
+        <br>
+        <div id="div1" class="mydiv">
+            <p id="p1"> This is the first paragraph</p>
+            <p id="p2"> This is the second paragraph</p>
+        </div>
+        <div id="div2">
+                <p id="p3"> This is the third paragraph</p>
+               
+            </div>
+    </body>
+    <script type="text/javascript" src="JS/jquery.js"></script>
+    <script>
+        $(document).ready(function (){
+
+            $("#btn1").click(function (){
+
+                $("#div1").addClass("newdiv");
+
+            });
+
+            $("#btn2").click(function(){
+
+                $("#div1").removeClass("newdiv");
+            });
+
+            $("#btn3").click(function(){
+
+                $("#div1").toggleClass("paraclass");   
+            });
+            $("#btn4").click(function(){
+
+               $("#div1").css("font-size","30px");
+               $("#div2").css("color","red");
+               $("#div2").css("font-size","30px");
+              //alert(  $("#div1").css("font-size"));
+
+            });
+
+        });
+    </script>
+</html>

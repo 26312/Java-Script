@@ -1,0 +1,33 @@
+<!DOCTYPE html> 
+<head>
+    <title>Objects In JavaScripts</title>
+</head>
+    <body>
+
+    </body>
+
+    <script type="text/javascript">
+    
+        var Cars = {
+
+            company_Name : "Tata",
+            model_Name: "Bolt",
+            price: 600000,
+
+        // We can even create a function within a Object in JavaScript
+            autoPilot : function()
+            {
+
+                return "No AutoPilot Mode Available"; // If document.write is used in stead of reutrn
+            }
+        }
+
+        document.write("Comapny Name: "+ Cars.company_Name);
+        document.write("<br> Model_Name:" + Cars.model_Name + "<br> Price: " + Cars.price + "<br>");
+        document.write(Cars.autoPilot() );
+        
+       
+    
+    
+    </script>
+</html>

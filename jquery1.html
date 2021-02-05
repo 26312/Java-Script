@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>Jquery</title>
+    </head>
+    <body>
+        <h3 id="head">Welcome to Jquery Session</h3>
+        <br>
+        <button id="btn" onclick="fade()">Click Here</button>
+    </body>
+    <!--script src="JS/jquery.js"></script-->
+
+    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+   <!--The above line of code is used from the CDN (Content Delivery Netwrok). Using the above line of code
+    Jquery is being called from the server and is accessiable only when the system is connected to the network-->
+   <script>
+        function fade()
+        {
+           // alert(); alert was called in to check wether function is working or not
+
+           $("#head").fadeToggle(2000);
+        }
+    </script>
+</html>

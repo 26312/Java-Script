@@ -1,0 +1,33 @@
+<html>
+    <head> <h1><i><u>Working With Objects</u></i></h1>
+        <title> OBJECTS </title>
+        <script type="text/javascript">
+        
+        function Cars(brand,model,price){
+
+            this.brand = brand;
+            this.model = model;
+            this.price = price;
+        }
+
+        let c1 = new Cars("Audi", "Q8",40000);
+        let c2 = new Cars("Tesla", "T5",45000);
+        let c3 = new Cars("BMW", "A600",47000);
+
+        document.write("<h3>"+ c1.brand+"</br>"+ c1.model+"</br>"+c1.price+"</h3>");
+        document.write("<h3>"+ c2.brand+"</br>"+ c2.model+"</br>"+c2.price+"</h3>");
+        document.write("<h3>"+ c3.brand+"</br>"+ c3.model+"</br>"+c3.price+"</h3>");
+        
+        function AutoPilot(price){
+
+            if(price>40000){
+                document.write("<h3> This Car has autopilot option");
+            }
+
+        }
+        let c4 = new AutoPilot(c1.price);    
+        //document.write("<h3>"+c4+"</h3>");
+        document.write(AutoPilot(35000));
+        </script>
+    </head>
+</html>

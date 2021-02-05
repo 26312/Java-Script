@@ -1,0 +1,23 @@
+<html>
+    <head> Slectbox
+        <title>DOM Manipulation</title>
+        <script type="text/javascript">
+            function fn()
+            {
+                let str = document.getElementById("selectbox");
+                alert(str.options[str.selectedIndex].value);
+            }
+        </script>
+    </head>
+    <body> <br><br>
+        <select id="selectbox">
+            <option value="Java">Java</option>
+            <option value="ASP.net">ASP.net</option>
+            <option value="Java_Script">Java_Script</option>
+            <option value="R-Programming">R-Programming</option>
+        </select> <br><br>  
+        <button id="btn" onclick="fn()">Submit</button>
+    
+    </body>
+
+</html>

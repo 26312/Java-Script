@@ -1,0 +1,55 @@
+<html>
+    <head><h3><u>FORM VALIDATION</u></h3>
+        <title>Forms</title>
+        <script>
+            function validation()
+            {
+                let username = document.getElementById("username");
+                let password = document.getElementById("password");
+
+                if(username.value.trim()=='')
+                {
+                    //alert("Please enter username");
+                    username.style.border = 'solid 3px red';
+                    document.getElementById("lbl_u").style.visibility = 'visible';
+                    return false;
+                }
+                else if(password.value.trim()=='')
+                {
+                    //alert("Please enter password");
+                    password.style.border = 'solid 3px green';
+                    document.getElementById("lbl_p").style.visibility = 'visible';
+                    
+                    return false;
+                }
+                else if(password.value.length<5)
+                {
+                    alert("Password length should be more than 5");
+                    return false;
+                }
+                else
+                {
+                    return true;
+                }
+            }
+
+
+        </script>
+    </head>
+    <body>
+        <form onsubmit="return validation()" action="Mouse_overout.html">
+        <br><br>
+        <input id="username" type="text" placeholder="username">
+        <label id="lbl_u" style="color: red;visibility: hidden;">Invalid</label>
+        <br><br>
+        <input id="password" type="password" placeholder="password">
+        <label id="lbl_p" style="color: green;visibility: hidden;">Invalid</label>
+        <br><br>
+        <button id="btn" > Click Here</button>
+        
+        
+        
+        
+        </form>
+    </body>
+</html>

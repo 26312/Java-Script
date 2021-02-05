@@ -1,0 +1,96 @@
+<html>
+    <head><b><i>Welcome to JavaScript Session</i></b>
+    <title>
+        JavaScript Session
+    </title>
+    <link rel="stylesheet" href="CSS/effects.css">
+    <link rel="stylesheet" href="jquery-UI/jquery-ui.css">
+    <link rel="stylesheet" href="jquery-UI/jquery-ui.structure.css">
+    <link rel="stylesheet" href="jquery-UI/jquery-ui.theme.css">
+</head>
+<body>
+    <br>
+    <button id="btn" name="Click Here" >Click Here</button> <br>
+    <br>
+    <div id="div1" title="Calender">
+    </div>
+    <br><br>
+
+    <div id="div2" title="Accordion" >
+        <h4>Heading_1</h4>
+        <p> This is the content for first heading
+        </p>
+
+        <h4>Heading_2</h4>
+        <p>This is the content for second heading
+        </p>
+
+        <h4>Heading_3</h4>
+        <p>This is the content for third heading</p>
+    </div>
+    <br>
+    <br>
+
+    <div id="div3" title="Welcome to Audi_Logo">
+        <h4>This is the audi logo</h4>
+        <img src="images/audi_logo.jpg" width="300px" opacity="0.4">
+    </div>
+    
+</body>
+<script type="text/javascript" src="JS/jquery.js"></script>
+<script type="text/javascript" src="jquery-ui/jquery-ui.js"></script>
+<script>
+
+    $(document).ready(function()
+    {   
+        // Applying operations on the calender
+        $("#div1").datepicker({
+
+            numberofMonths:1,
+            showWeek:true,
+            showOtherMonth:true,
+            changeMonth:true,
+            changeYear:true
+            
+        });
+
+        $("#div2").accordion({
+
+            collapsiable:true,
+            event:"click",
+            animate:1000,
+            heightStyle:1000,
+            active:false
+        });
+
+        $("#div3").dialog({
+
+            title:"Audi_Logo_Welcomes_You",
+            resizabel:true,
+            draggable:true
+        });
+
+
+        $("#btn").click(function()
+        {
+
+            // Getter Method
+            var height = $( "#div3" ).dialog( "option", "height" );
+                
+
+            //Setter Method
+            $( "#div3" ).dialog( "option", "resizable", false );
+
+            //Setter Method
+            $("#div1").datepicker("option","numberOfMonths",2);
+
+
+            $("#div3").fadeToggle(2000);
+            //  $("#div3").fadeIn(2000);
+        });
+
+
+    });
+
+</script>
+</html>

@@ -1,0 +1,26 @@
+<html>
+    <head> Working With <i>"getElementByTagName"</i>
+        <title>DOM Manipulation</title>
+        <script type="text/javascript">
+            function Click()
+            {
+                var para = document.getElementsByTagName("p");
+               // para[0].style.fontSize = 25;
+               // para[0].style.color = 'red';
+                for(let i=0; i<para.length; i++)
+                {
+                    para[i].style.fontSize = 30;              
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <p>This is paragrap 1</p>
+        <p>This is paragrap 2</p>
+        <p>This is paragrap 3</p>
+        <p>This is paragrap 4</p>
+        <p>This is paragrap 5</p>
+
+        <button onclick="Click()">Click Here</button>
+    </body>
+</html>

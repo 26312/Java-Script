@@ -1,0 +1,66 @@
+<html>
+    <head> <H3><b>Message Box Widget in JQuery UI</b></H3>
+        <title>
+            MsgBox Widget
+        </title>
+        <link rel="stylesheet" href="CSS/effects.css">
+        <link rel="stylesheet" href="jquery-ui/jquery-ui.css">
+        <link rel="stylesheet" href="jquery-ui/jquery-ui.structure.css">
+        <link rel="stylesheet" href="jquery-ui/jquery-ui.theme.css">
+
+    </head>
+    <body>
+        <div id="div1">
+            <h4> Welcome to Jquery Session</h4>
+            <br>
+            <button id="btn1">Click here</button>
+        </div>
+
+        <div id="div2" title="Message Box" >
+            <h4>This is the logo for Audi</h4><br>
+            <img src="images/audi_logo.jpg" width="300px">
+            <br> <br>
+            
+        </div>
+    </body>
+    <script type="text/javascript" src="JS/jquery.js"></script>
+    <script type="text/javascript" src="jquery-ui/jquery-ui.js"></script>
+    <script>
+        
+        $("#btn1").click(function(){
+
+            $("#div2").dialog({
+
+                title: "Shutter Box",
+                draggable: true,
+                resizable: true,
+                modal:true,
+                buttons:[
+                    {
+                        text:"Close",
+                        icon:"ui-icon-arrowreturnthick-1-e",
+                        click:function()
+                        {
+                            $(this).dialog("close");
+                        }
+                    },
+                    {
+
+                        text:"Okay",
+                        icon:"ui-icon-folder-open",
+                        click:function()
+                        {
+                            $(this).dialog("close");
+
+                        }
+                    }
+                
+                ]
+                              
+            
+
+            });
+        });
+
+    </script>
+</html>

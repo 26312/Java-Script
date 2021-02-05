@@ -1,0 +1,18 @@
+<!Doctype html>
+    <head> <h3> DOM Manipulation </h3>
+        <title>DOM Manipulation</title>
+        <script> 
+        function setnewimage(){                 
+            document.getElementById("img").src="BMW_logo.jpg";
+        }
+        function setoldimage(){
+            document.getElementById("img").src="audi_logo.jpg";
+           // alert();
+        }
+        </script>
+    </head>
+    <body>
+        <br><br>
+        <img id="img" onmouseover="setnewimage()" onmouseout="setoldimage()" src="audi_logo.jpg" width="300" />
+    </body> 
+</html>

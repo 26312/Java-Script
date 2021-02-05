@@ -1,0 +1,54 @@
+<html>
+    <head> <h4><u>FORM Validations</u></h4>
+        <title> FORM Validation2</title>
+        <script>
+            function validate()
+            {
+                let username = document.getElementById("username");
+                let password = document.getElementById("password");
+
+                if(username.value.trim() == '')
+                {   
+                   // alert("Username is missing");
+                   username.style.border = "solid 3px red";
+                   document.getElementById("lb1").style.visibility='visible';
+                   
+                    return false;
+                }
+      
+                else if(password.value.trim() == '')
+                {
+                   // alert("Password is missing");
+                    password.style.border ="solid 3px red";
+                   document.getElementById("lb2").style.visibility='visible';
+                    return false;
+                }
+                
+                else if(password.value.length<5)
+                {
+                    alert("Password length is short");
+                    return false;
+                }
+
+                else
+                {
+                    return true;
+                }
+
+            }
+
+        </script>
+    </head>
+    <body>
+        <form onsubmit="return validate()" action="Mouse_overout.html">
+        <br> <br>
+        <input id="username" type="text" placeholder="username">
+        <label id="lb1" style="color: red;visibility: hidden;">Invalid</label>
+        <br> <br>
+        <input id="password" type="password" placeholder="password">
+        <label id="lb2" style="color: red;visibility: hidden;">Invalid</label>
+        <br><br>
+        <button type="submit"> Click Here</button>
+        </form>
+    </body>
+</html>

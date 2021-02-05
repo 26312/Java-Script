@@ -1,0 +1,61 @@
+<html>
+    <head><h3><u><b>Account Validation</b></u></h3>
+        <title>Regex/Account Validation</title>
+        <script>
+            function validate()
+            {
+            
+                let id = document.getElementById("id").value;
+                let pwd = document.getElementById("pwd").value;
+
+                let regx1 = /^([a-zA-Z0-9\d.-]+)@([a-zA-Z0-9]+).([a-z]{2,8})(.[a-z]{2,8})?$/;
+                let regx2 = /(^[a-zA-Z0-9\@_]{10})$/;
+
+                    if(regx1.test(id))
+                    {
+                        document.getElementById("lbl1").innerHTML='Valid username';
+                        document.getElementById("lbl1").style.visibility='Visible';
+                        document.getElementById("lbl1").style.color='green';
+                        
+                    }
+                    else
+                    {
+                        document.getElementById("lbl1").innerHTML='Invalid username';
+                        document.getElementById("lbl1").style.visibility='Visible';
+                        document.getElementById("lbl1").style.color='red';
+                       
+                    }
+                    if(regx2.test(pwd))
+                    {
+                        document.getElementById("lbl2").innerHTML='Valid username';
+                        document.getElementById("lbl2").style.visibility='Visible';
+                        document.getElementById("lbl2").style.color='green';
+                        
+                    }
+                    else
+                    {
+                        document.getElementById("lbl2").innerHTML='Invalid username';
+                        document.getElementById("lbl2").style.visibility='Visible';
+                        document.getElementById("lbl2").style.color='red';
+                        
+
+                    }
+
+            }
+        </script>
+    </head>
+        
+        <body>  
+            
+                <br>
+                <input id="id" type="text" placeholder="username">
+                <label id="lbl1" style="color: red;visibility: hidden;">Invalid Account</label>
+                <br><br>
+                <input id="pwd" type="password" placeholder="password">
+                <label id="lbl2" style="color: red;visibility: hidden;">Wrong Password</label>
+                <br> <br>
+                <button id="btn" type="button" onclick="validate()">Validate</button>
+            
+        </body>
+    
+</html>

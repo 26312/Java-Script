@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<head>
+<title>Function Construtor</title>
+</head>
+<body>
+
+</body>
+<script type="text/javascript">
+
+    // Function Constructor
+    // Whenever we want multiple objects, we can do that by creating Function Constructor which will
+    // create a Template for 
+
+        function Cars(Company,Model,Name,Engine,Price){
+    
+            this.Company = Company;
+            this.Model = Model;
+            this.Name = Name;
+            this.Engine = Engine;
+            this.Price = Price;
+            this.autoPilot = function(){
+                
+                    document.write("<h4> Auto Pilot Mode Available</h4>");
+            }
+        }
+
+        var v1 = new Cars("Tesla","T3","HyperTruck","Electric",800000);
+        var v2 = new Cars("Tata","XMG","Bolt","Petrol",600000);
+
+        Cars.Register = "DL";
+
+        document.write(v1.Company + "<br> " + v1.Engine + "<br>" + v1.Model);
+        v1.autoPilot();
+        document.write(v2.Company + "<br>" + v2.Engine +"<br>" + v2.Model);
+        document.write("<br>" + v1.Register+ "<br>");
+
+</script>
+</html>

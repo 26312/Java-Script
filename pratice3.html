@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<head>
+    <title>Animation In JavaScript</title>
+</head>
+<body>
+        <button id="btn1" onclick="fadeOut()">FADE OUT</button>
+        <br>
+        <br>
+        <img id="img" src="images/heart.jpg" width= "500px">
+        <br>
+        <br>
+        <button id="btn2" onclick="fadeIn()">FADE IN</button>
+
+</body>
+<script type="text/javascript">
+    var opacity = 0;
+    var intervalID = 0;
+
+    function fadeOut(){
+
+        intervalID = setInterval(hide,100);
+    }
+    function hide()
+    {
+        var img = document.getElementById("img");
+        opacity = Number(window.getComputedStyle(img).getPropertyValue("opacity"));
+
+        if(opacity>0){
+
+            opacity = opacity-0.1;
+            img.style.opacity = opacity;
+        }
+        else{
+
+            clearInterval(intervalID);
+        }
+    }
+    // End of Fadeout Function
+
+    function fadeIn(){
+
+        intervalID = setInterval(show,200);
+    }
+    function show(){
+
+        var img = document.getElementById("img");
+        opacity = Number(window.getComputedStyle(img).getPropertyValue("opacity"));
+        if(opacity<1){
+            opacity = opacity + 0.1;
+            img.style.opacity = opacity;
+        }
+        else{
+            clearInterval(intervalID);
+        }
+    }
+
+
+
+
+</script>
+
+</html>

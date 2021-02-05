@@ -1,0 +1,27 @@
+<html>
+    <head><h4>Working With DOM (TextBox)</h4>
+        <title>TextBox Functionality</title>
+        <script type="text/javascript">
+        function clk(){
+            let str1 = document.getElementById("text1").value;
+            let str2 = document.getElementById("text2").value;
+                if(str1=='varun' && str2=='123')
+                {
+                alert("Valid Credentials");
+                }
+                else
+                {
+                alert("Invalid Credentials");
+                }
+            }
+     
+        </script> 
+    </head>
+    <body>
+        <input id="text1" placeholder="username"><br>
+        <input id="text2" placeholder="password" type="password">
+        <br><br>
+        
+        <button onclick="clk()" id="btn1">Login</button>
+    </body>
+</html>

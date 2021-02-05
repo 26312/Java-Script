@@ -1,0 +1,24 @@
+<html>
+    <head> 
+        <title>Fading</title>    
+        <link rel="stylesheet" href="CSS/style.css">
+    </head>
+
+    <body>
+        <h2 id="head1" class="h1">Welcome to Jquery session</h2>
+        <h2 id="head2" class="h2">Welcome to Jquery session</h2>
+        <h2 id="head3" class="h1">Welcome to Jquery session</h2>
+        <h2 id="head4" class="h2">Welcome to Jquery session</h2>
+        <br>
+        <button id="btn" onclick="fn()">Fade</button>
+    </body>
+    <script src="JS/jquery.js"></script>
+    <script>
+        function fn()
+        {
+            //alert("Function is working"); To check if function is working or not.
+
+            $(".h2").fadeToggle(2000);
+        }
+    </script>
+</html>

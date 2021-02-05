@@ -1,0 +1,58 @@
+<html>
+    <head><h6><i><b> Call Back & Chaining</b></i></h6> 
+        <title> Call Back & Chaining</title>
+        <link rel="stylesheet" href="CSS/pratice.css">
+    </head>
+    <body>
+        <br>
+        <button id="btn1">Button 1</button>
+        <button id="btn2">Button 2</button>
+        <button id="btn3">Button 3</button>
+        <br><br>
+        <div id="div1">
+            <p>This is the first line of the paragraph</p>
+            <p>This is the second line of the paragraph</p>
+        </div><br>
+        <div id="div2">
+            <p>This is the third line of the paragraph</p>
+            <p>This is the fourth line of the paragraph</p>
+        </div><br>
+        <div id="div3">
+            <p>This is the fifth line of the paragraph</p>
+            <p>This is the sixth line of the paragraph</p>
+        </div>
+    </body>
+    <script type="text/javascript" src="JS/jquery.js"></script>
+    <script>
+    
+        $(document).ready(function (){
+
+            $("#btn1").click(function (){
+
+                $("#div1").toggle(3000, function(){//Call Back
+
+                    alert("effect done");//Call Back
+                })
+            });
+
+            function printMsg(){ // Call Back function created for #div2 
+                                // The content in div2 will first operate as per the 'slideToggle'
+                                // method and then the function 'printMsg' will be called which in turn prints 
+                                // the alert message
+
+                alert("Call back done on div2");
+            }
+
+            $("#btn2").click(function (){
+
+                $("#div2").slideToggle(2000,printMsg);//Call Back
+            });
+
+            $("#btn3").click(function (){
+
+                $("#div3").slideUp(3000).slideDown(3000).fadeOut(1000).fadeIn(1000); // Chaining
+            });
+
+        });
+    </script>
+</html>

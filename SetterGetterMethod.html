@@ -1,0 +1,97 @@
+<html>
+    <head><h3><b><i>Setter-Getter Method in JQuery UI</i></b></h3>
+        <title>Setter-Getter Method</title>
+        <link rel="stylesheet" href="CSS/effects.css">
+        <link rel="stylesheet" href="jquery-ui/jquery-ui.css">
+        <link rel="stylesheet" href="jquery-ui/jquery-ui.structure.css">
+        <link rel="stylesheet" href="jquery-ui/jquery-ui.theme.css">
+    </head>
+    <body>
+        <br>
+        <button id="btn">Click Here</button><br><br>
+
+        <div id="div1" title="My Calender">
+        </div>
+        <br> <br>
+        <div id="div2" title="My Accordion">
+                <h4>Varun</h4>
+                <p>A proffessional Data Scientist, likes to play and work around with Data,
+                    Efficient in providing valuble insights to concern departments within and outside the organization,
+                    Owns 35% of shares in the company
+                </p>
+
+                <h4>Back Gound</h4>
+                <p>Graduated from Pondicherry University - 2014
+                    Pursuing Masters in Information engineering in HSRW  Germany 
+                </p>
+
+                <h4>Knowledge</h4>
+                <p>Programming,Analytical Thinking, Great Imagination
+                </p>
+
+        </div>
+        <br><br>
+        <div id="div3" title="Audi Logo">
+                <h4>This is the logo for Audi</h4><br>
+                <img src="images/audi_logo.jpg" width="300px" opacity="0.4">
+        </div>
+        
+    </body>
+    <script type="text/javascript" src="JS/jquery.js"></script>
+    <script type="text/javascript" src="jquery-ui/jquery-ui.js"></script>
+    <script>
+        
+        $(document).ready(function()
+        {
+
+
+            $("#div1").datepicker(
+            {
+                numberOfMonths:1,
+                changeYear:true,
+                changeMonth:true,
+                showOtherMonths:true,
+                showWeek:true
+            });
+
+            $("#div2").accordion(
+            {
+                collapsiable:true,
+                event:"click",
+                animate:1000,
+                heightStyle:true,
+                active:false        
+            });
+
+ 
+            $("#div3").dialog(
+            {   
+                title:"Audi Shutter Box" ,
+                draggable:true,
+                resizable:true,
+               
+
+            });
+
+            $("#btn").click(function()
+            {
+                // Getter Method
+                var height = $( "#div3" ).dialog( "option", "height" );
+                
+
+                //Setter Method
+                $( "#div3" ).dialog( "option", "resizable", false );
+
+                //Setter Method
+                $("#div1").datepicker("option","numberOfMonths",2);
+
+
+                $("#div3").fadeToggle(2000);
+              //  $("#div3").fadeIn(2000);
+            });
+
+
+        });
+
+    </script>
+    </html>

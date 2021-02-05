@@ -1,0 +1,49 @@
+<html>
+    <head> <h3><i><b>Scalling Operation Using Java-Script</b></i></h3>
+        <title>Scalling In Java-Script</title>
+        <script>
+                let diff = 2;
+                let ID = 0;
+               let width = 1000;
+             
+             function increase()
+             {
+                clearInterval(ID);    
+                ID =   setInterval(zoomin,20);
+             }
+             function zoomin()
+             {  
+                if(width<1000)
+                {
+                    width = width + diff;
+                    document.getElementById("img").style.width = width;
+                }
+                else
+                {
+                    clearInterval(ID)
+                }    
+             }
+             function decrease()
+             {
+                clearInterval(ID);    
+                 ID = setInterval(zoomout,20);
+             }  
+             function zoomout()
+             {
+                 if(width>100)
+                 {
+                     width = width - diff;
+                     document.getElementById("img").style.width=width;
+                 }
+                 else
+                 {
+                     clearInterval(ID);
+                 }
+             }
+
+        </script>
+    </head>
+    <body>
+        <img onmouseover="increase()" onmouseout="decrease()" src="heart.jpg" id="img" width="500px">
+    </body>
+</html>

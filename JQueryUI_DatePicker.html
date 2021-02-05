@@ -1,0 +1,33 @@
+<html>
+    <head> <h2><u>Date Picker Widget Control in JQuery UI</u></h2>
+        <title>Date Picker</title>
+        <link rel="stylesheet" href="CSS/effects.css">
+        <link rel="stylesheet" href="jquery-ui/jquery-ui.css">
+        <link rel="stylesheet" href="jquery-ui/jquery-ui.structure.css">
+        <link rel="stylesheet" href="jquery-ui/jquery-ui.theme.css">
+    </head>
+    <body>
+        <h3><i><b>Date Picker</b></i></h3>
+        <br><br>
+        <div id="div1" >
+            <input id="t1" type="text" placeholder="Select Date">
+        </div>
+    </body>
+    <script type="text/javascript" src="JS/jquery.js"></script>
+    <script type="text/javascript" src="jquery-ui/jquery-ui.js"></script>
+    <script>
+    
+            $("#t1").datepicker({
+
+                numberOfMonths : 1,
+                changeYear : true,
+                changeMonth : true,
+                showOtherMonths : true,
+                showWeek : true,
+                minDate : new Date(2019,11,04),
+                maxDate : new Date(2020,11,30)
+
+            });
+
+    </script>
+</html>

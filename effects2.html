@@ -1,0 +1,50 @@
+<htm>
+        <head> Animating Effects Jquery
+            <title>Jquery</title>
+            <link rel="stylesheet" href="CSS/effects2.css"> 
+        </head>
+        <body>
+            <br><br>
+            <button id="btn1">Animate</button>
+            <button id="btn2">Animate Back</button>
+            <br><br>
+            <div id="div" class="mydiv">CUBE</div>
+    
+        </body>
+        <script type="text/javascript" src="JS/jquery.js"></script>
+        <script>
+        
+            $(document).ready(function(){ 
+    
+                $("#btn1").click(function (){
+    
+                    $("#div").animate({
+                        
+                        width: '200px',
+                        height: '200px',
+                        opacity: '1',
+                        left : '200px'
+    
+                    },1000)
+                });
+    
+                $("#btn2").click(function(){
+    
+                   $("#div").animate({
+                        
+                        width: '100px',
+                        height: '100px',
+                        opacity: '0.4',
+                        left : '0px'
+    
+                    },1000)
+                    
+                    
+
+                });
+    
+    
+    
+            });
+        </script>
+    </html>

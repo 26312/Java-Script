@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <titl>Selectors</titl>
+        <link rel="stylesheet" href="CSS/events.css">
+    </head>
+    <body>
+        <p id="pf"><b>This is the first paragraph </b></p>
+        <br>
+        <div id="div1" class="mydiv">
+            <ul>
+                <li>List Item 1</li>
+                <li>List Item 2</li>
+                <li>List Item 3</li>
+            </ul>
+        </div>
+        <div id="div2" class="mydiv">
+            <ul>
+                <li>List Item 4</li>
+                <li>List Item 5</li>
+                <li>List Item 6</li>
+            </ul>
+        </div>
+        <br>
+        <p id="pl">This is the last paragraph</p><br>
+
+        <button id="btn">Click Here</button>
+    </body>
+    <script src="JS/jquery.js"></script>
+    <script>
+
+        $("button").click(function op(){
+          $("#pf:first").fadeToggle(1000);
+          $("#pl:last").fadeToggle(1000);
+          $("ul:first, li:last").fadeToggle(5000);
+
+        });
+      
+    </script>
+</html>

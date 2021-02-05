@@ -1,0 +1,18 @@
+#div1{
+    color: blue;
+    margin: 3px;
+    border: 3px solid black;
+    padding: 3px;
+}
+#div2{
+    color: darkgreen;
+    margin: 6px;
+    border: 6px solid rgb(82, 3, 82);
+    padding: 6px;
+}
+#div3{
+    color: yellowgreen;
+    margin: 8px;
+    border: 8px solid darkred;
+    padding: 8px;
+}

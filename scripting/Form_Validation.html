@@ -1,0 +1,37 @@
+<html>
+    <head> FORM Validations
+        <title>FORMS</title>
+            <script>
+                function validate()
+                {
+                    let t1 = document.getElementById("t1");
+                    let t2 = document.getElementById("t2");
+
+                    if(t1.value.trim() =="" || t2.value.trim() =="")
+                    {
+                        alert("No credentials Entered, kindly enter your credentials")
+                        return false;
+                    }else
+                    
+                    {
+                        true;
+                    }
+                }
+                
+            </script>
+    </head>
+    <body> 
+        <br>
+        <form onsubmit="return validate()" action="Mouse_overout.html" >
+            <input id="t1" type="text" placeholder="username" required >
+            <br><br>
+            <input id="t2" type="password" placeholder="password" required>
+            <br><br>
+            <button type="submit">Click Here</button>
+        </form>
+
+
+
+
+    </body>
+</html>

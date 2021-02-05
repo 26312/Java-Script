@@ -1,0 +1,8 @@
+.mydiv{
+    width: 100px;
+    height: 100px;
+    background-color: seagreen;
+    opacity: 0.4;
+    position: absolute;
+    padding: 20px;
+}

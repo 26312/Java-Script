@@ -1,0 +1,13 @@
+.mydiv{
+    border: 2px solid blue;
+}
+.newdiv{
+    border-radius: 10px;
+    background-color: cyan;
+}
+.paraclass{
+    font-weight: bold;
+    font-style: italic;
+    font-size: x-large;
+    color: red;
+}

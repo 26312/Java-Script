@@ -1,0 +1,61 @@
+<html>
+    <head><h4><i><b>Effects in Jquery</b></i></h4>
+        <title>Effects in Jquery</title>
+        <link rel="stylesheet" href="CSS/pratice.css">
+    </head>
+    <body>
+        <button id="btn1" > Click Button 1</button>
+        <button id="btn2" > Click Button 2</button>
+        <button id="btn3" > Click Button 3</button>
+        <br>
+        <div id="div1">
+            <p>This is the first paragraph</p>
+        </div>
+        <div id="div2">
+            <p> This is the second paragraph</p>
+            <p> This is the third paragraph</p>
+        </div>
+        <div id="div3">
+            <ul>
+                <li>Item List 1</li>
+                <li>Item List 2</li>
+                <li>Item List 3</li>
+            </ul>
+        </div>
+        <div>
+            <ul>
+                <li>Item List 1</li>
+                <li>Item List 2</li>
+                <li>Item List 3</li>
+            </ul>
+        </div>
+    </body>
+    <script src="JS/jquery.js" type="text/javascript"></script>
+    <script>
+            $(document).ready(function(){
+
+                $("#btn1").click(function(){
+
+                   // $("#div1, #div3").hide();
+                    $("#div1, #div3").slideUp();
+
+                });
+
+                $("#btn2").click(function (){
+
+                   //$("#div1, #div3").show();
+                   $("#div1, #div3").slideDown();
+               
+                });
+
+                $("#btn3").click(function (){
+                   // $("#div1, #div3").toggle();
+                    $("#div1, #div3").slideToggle();
+                });
+
+
+
+            });
+    </script>
+
+</html>

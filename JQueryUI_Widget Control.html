@@ -1,0 +1,31 @@
+<html>
+        <head><h3><i><i><b>Tooltip Widget Control in JQuery UI</b></i></h3>
+            <title>Tooltip Widget Control in JQuery UI</title>
+            <link rel="stylesheet" href="CSS/effects.css">
+            <link rel="stylesheet" href="jquery-ui/jquery-ui.css">
+            <link rel="stylesheet" href="jquery-ui/jquery-ui.structure.css">
+            <link rel="stylesheet" href="jquery-ui/jquery-ui.theme.css">
+        </head>
+            <body>
+                <div id="div1">
+                    <img id="img1" title="" src="images/audi_logo.jpg" width="500px">
+                </div>
+                
+            </body>
+            <script type="text/javascript" src="JS/jquery.js"></script>
+            <script type="text/javascript" src="jquery-ui/jquery-ui.js"></script>
+            <script>
+                
+                $("img").tooltip({
+    
+                    content : 'Welcome to Audi',
+                    show: {effect:"bounce",duration: 5000},
+                    hide:{effect:"explode",duration:2000}
+    
+    
+                    //https://api.jqueryui.com/category/effects/  --> various effects can be found in this link 
+    
+                })
+    
+            </script>
+     </html>

@@ -1,0 +1,52 @@
+<html>
+    <head><h3><i><b>Fade In & Out in Java-Script</b></i></h3>
+        <title>Fadeinout</title>
+        <script>
+            var ID=0;
+            var opacity = 0;
+            function fadeout()
+            {
+               ID = setInterval(hide,200);
+            }
+            function hide()
+            {
+                var img = document.getElementById("img");
+                opacity = Number(window.getComputedStyle(img).getPropertyValue("opacity"));
+                if(opacity>0)
+                {
+                    opacity=opacity-0.1;
+                    img.style.opacity = opacity;
+                }
+                else
+                {
+                    clearInterval(ID);
+                }
+            }
+            function fadein()
+            {
+               ID = setInterval(show,200);
+            }
+            function show()
+            {
+                var img = document.getElementById("img");
+                opacity = Number(window.getComputedStyle(img).getPropertyValue("opacity"));
+                if(opacity<1)
+                {
+                    opacity=opacity+0.1;
+                    img.style.opacity = opacity;
+                }
+                else
+                {
+                    clearInterval(ID);
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <button id="btn1" onclick="fadeout()">Fade Out</button><br><br>
+            <img src="audi_logo.jpg" id="img" width="500px"  ><br><br>
+        <button id="btn2" onclick="fadein()"> Fade In</button>    
+    </body>
+    
+
+</html>

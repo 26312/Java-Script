@@ -1,0 +1,32 @@
+<html>
+    <head> <h3><i><b>Timing Function in Java-Script</b></i></h3>
+        <title>Timing Function</title>
+        <script>
+            let ID =0;
+            let seconds = 0
+            function printMsg()
+            {
+                //document.getElementById("op").innerHTML= "it has been more than 5 seconds ";
+               document.getElementById("op").innerHTML= seconds+ "seconds";
+               seconds++;
+            }
+            function start()
+            {
+               //ID = window.setTimeout(printMsg,5000);
+               ID = window.setInterval(printMsg,1000);
+            }
+            function stop()
+            {
+                window.clearInterval(ID);
+            }
+
+        </script>
+    </head>
+    <body>
+        <button id="btn1" onclick="start()">START</button>
+        <br>
+        <h2 id="op">Welcome to Timing Function in Java-Script</h2>
+        <br>
+        <button id="btn2" onclick="stop()">STOP</button>
+    </body>
+</html>

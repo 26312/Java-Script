@@ -1,0 +1,34 @@
+<html>
+    <head>
+        JQuery DOM Manipultation-1
+        <title>JQuery DOM Manipultation-1</title>
+        <link rel="stylesheet" href="CSS/JqueryDomManipulation_1.css">
+    </head>
+    <body>
+        <br><br>
+        <button id="btn">Click Here</button>
+        <br>
+        <p id="p1"> This is the first paragraph</p>
+        <br>
+        <div id="div">
+            <p id="p2">This is the<b>first</b> paragraph of <i>Division</i>one</p>
+            
+            <p>This is the <b>Second</b>paragraph of the <u>division</u></p>
+        </div>
+        <p id="pf"></p>
+        <p id="pd"></p>
+    </body>
+    <script type="text/javascript" src="JS/jquery.js"></script>
+    <script>
+        $(document).ready(function(){
+
+            $("#btn").click(function (){
+
+                $("#p1").text("Hello World!!");
+                $("#pf").html("This is the <b>final</b> paragraph without <i>division<i/>");
+                alert($("#div").css('color'));
+
+            });
+        });
+    </script>
+</html>

@@ -1,0 +1,53 @@
+<html>
+    <head> <b>Selectors 2 </b>
+        <title>Selectors 2</title>
+        <link rel="stylesheet" href="CSS/style2.css">
+    </head>
+    <body>
+        <h2 id="head1" class="head"> Welcome  to selectors session</h2>
+        <p><b> This is the first paragraph </b></p>
+        
+        <p><b> This is the second paragraph </b></p>
+        <br>
+        <div id="div1" class="firstdiv">
+            <p>This is para 1 in div1</p>
+            <p>This is para 2 in div1</p>
+            <p>This is para 3 in div1</p>
+        </div><br>
+        <div id="div2" class="seconddiv">
+                <p>This is para 4 in div2</p>
+                <p>This is para 5 in div2</p>
+                <p>This is para 6 in div2</p>
+        </div><br>
+        <div id="div3" class="thirddiv">
+            <ul>
+                <li>Item List 1</li>
+                <li>Item List 2</li>
+                <li>Item List 3</li>
+            </ul>
+        </div><br>
+        <div id="div4" class="fourthdiv">
+            <ul>
+                <li> Item List 101</li>
+                <li> Item List 102</li>
+                <li> Item List 103</li>
+            </ul>
+
+        </div>
+
+        <p><b> This is the last paragraph </b></p>
+        <br>
+        <button id="btn" onclick="op()">Click Here</button>
+    </body>
+    <script src="JS/jquery.js"></script>
+    <script>
+        function op()
+        {
+            //alert("function is operating");
+            $("li:odd").fadeToggle(2000);
+            $("p:first").fadeToggle(1000);
+            $("p:last").fadeToggle(1000);
+
+        }
+    </script>
+</html>
